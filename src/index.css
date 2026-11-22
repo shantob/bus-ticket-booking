@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes pg {
+    from {
+        opacity: 0;
+        transform: translateY(8px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.page {
+    animation: pg .3s ease
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .page {
+        animation: none
+    }
+}
+
+@media print {
+
+    nav,
+    footer,
+    .no-print {
+        display: none !important
+    }
+}
